@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block header_content %}
+	<div class="success">Start Page.twig</div>
+	<header class="article-header">
+		{% set img = TimberImage(post.hero_image) %}
+		<img class="hero-img" src="{{img.src|resize(1400,600)}}" alt="">
+		<div class="contain-sm">
+			<h1 class="article-title">{{post.title}}</h1>
+			<p class="article-tagline">{{post.main_tagline}}</p>
+			<p class="article-tagline">{{post.intro_blurb}}</p>
+		</div>
+	</header>
+{% endblock %}
+
+{% block content %}
+	<div class="content-wrapper">
+
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+
+			<section class="article-content">
+				<div class="article-body">
+					{% include 'partials/content-blocks.twig'	%}
+				</div>
+			</section>
+		</article>
+		<div class="error">End Page.twig</div>
+	</div><!-- /content-wrapper -->
+{% endblock %}

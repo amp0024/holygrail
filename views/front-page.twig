@@ -1,0 +1,30 @@
+
+{# No specific markup for the home page, yet. Add it here inside a content block! #}
+
+{% extends "base.twig" %}
+
+{% block content %}
+  <div class="success">Start front-page.twig</div>
+
+  <div class="article">
+	    {% set img = TimberImage(post.hero_image) %}
+
+	    <p class="hero-tagline-main">{{post.main_tagline}}</p>
+	    <p class="hero-tagline-sub">{{post.intro_blurb}}</p>
+	    <img src="{{img.src}}" alt="Hero Image">
+
+  </div>
+
+	<div class="content-wrapper">
+
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+
+			<section class="article-content">
+				<div class="article-body">
+					{% include 'partials/content-blocks.twig'	%}
+				</div>
+			</section>
+		</article>
+		<div class="error">End front-page.twig</div>
+	</div><!-- /content-wrapper -->
+{% endblock %}

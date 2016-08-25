@@ -1,0 +1,20 @@
+
+{% for block in post.get_field('blocks') %}
+
+  {% set block_class = block.acf_fc_layout %}
+
+  {% if block.acf_fc_layout == 'testimonial' %}
+    {% include 'blocks/testimonial.twig' %}
+  {% elseif block.acf_fc_layout == 'text' %}
+    {% include 'blocks/text.twig' with { contain : 'contain-lg' } %}
+  {% elseif block.acf_fc_layout == 'connected_items' %}
+    {% include 'blocks/connected-items.twig' %}
+  {% elseif block.acf_fc_layout == 'inline_elements' %}
+    {% include 'blocks/inline-elements.twig' with { contain : 'contain-lg' } %}
+  {% elseif block.acf_fc_layout == 'image' %}
+    {% include 'blocks/image.twig' with { contain : block.size } %}
+  {% elseif block.acf_fc_layout == 'html' %}
+    {% include 'blocks/html.twig' with { contain : block.size } %}
+  {% endif %}
+
+{% endfor %}

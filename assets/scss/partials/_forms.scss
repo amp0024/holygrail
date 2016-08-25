@@ -1,0 +1,148 @@
+
+// ---
+// Forms
+// ---
+
+// Forms styles here!
+
+*:focus {
+    outline: 1px dotted #aaa;
+}
+
+label, select {
+	display: block;
+}
+
+label {
+}
+
+input[type="search"] {
+	// Maybe add a nice search icon in the background?
+}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"] {
+
+	width: 100%;
+	border: $border-accent;
+
+	&:focus {
+		border-color: $color-accent-med;
+	}
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	line-height: normal;
+	cursor: pointer;
+}
+
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+}
+
+input[type="submit"],
+button {
+
+}
+
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+
+}
+
+
+/**
+ * Form
+ */
+
+// #form {
+// 	margin-top: 50px;
+// 	background-color: #f5f5f5;
+// 	box-sizing: border-box;
+
+// }
+
+// #gform_1 {
+// 	margin: 10px;
+// }
+
+
+// .gform_wrapper ul.gform_fields li.gfield {
+// 	padding-right: 0 !important;
+// }
+
+// .top_label div.ginput_complex.ginput_container.gf_name_has_1, .top_label div.ginput_complex.ginput_container.gf_name_has_2, .top_label div.ginput_complex.ginput_container.gf_name_has_3 {
+// 	width: 100% !important;
+// }
+
+// .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label, .gform_wrapper .field_sublabel_below div[class*=gfield_time_].ginput_container label {
+// 	display: none;
+// }
+
+// div.ginput_complex.ginput_container.gf_name_has_2 span {
+// 	width: 100% !important;
+// }
+
+// .gform_heading {
+// 	padding-top: 20px !important;
+// }
+
+// div.ginput_container_name span {
+// 	padding-right: 0 !important;
+// }
+
+
+
+// .name_first {
+// 	margin-right: 1% !important;
+// }
+
+// .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label, .gform_wrapper .field_sublabel_below div[class*=gfield_time_].ginput_container label {
+// 	margin:1px 0 0px 1px !important;
+// }
+
+// #gform_submit_button_1 {
+// 	width: 100%;
+//     margin: 0 auto 20px !important;
+//     background: #FFA637;
+//     border: none !important;
+//     background: #FFA637;
+//     box-shadow: inset 0px -3px 0px 0px #ED9420;
+//     transition: background .3s;
+//     color: white;
+//     padding: 10px;
+//     cursor: pointer;
+// }
+
+
+// @media ( min-width: 1000px ) {
+	
+// 	div.ginput_complex.ginput_container.gf_name_has_2 span {
+// 		width: 49% !important;
+// 	}
+// }

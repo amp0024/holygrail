@@ -1,0 +1,25 @@
+{% extends 'blocks/base.twig' %}
+
+{% block block_content %}
+
+  {% for elem in block.elements %}
+      {% if elem.acf_fc_layout == 'text' %}
+        {{elem.text}}
+      {% else %}
+          <div class="inline-elem {{elem.alignment}}">
+        {% if elem.acf_fc_layout == 'image' %}
+          {% set img = TimberImage(elem.image) %}
+            <img src="{{img.src|resize(600)}}" alt="{{img.alt}}">
+          {% if img.caption %}<p class="caption">{{img.caption}}</p>{% endif %}
+        {% elseif elem.acf_fc_layout == 'embed' %}
+            {{elem.embed_code}}
+        {% elseif elem.acf_fc_layout == 'pullquote' %}
+          <blockquote>
+            {{elem.quote}}
+          </blockquote>
+        {% endif %}
+          </div>
+      {% endif %}
+  {% endfor %}
+
+{% endblock %}

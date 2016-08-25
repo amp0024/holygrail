@@ -1,0 +1,81 @@
+
+// ----
+// Helper classes
+// ----
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+// Based on WP's naming conventions
+
+.alignright {
+  float: right;
+}
+
+.alignleft {
+  float: left;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+
+// Layout helpers
+
+.full-image {
+  width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  top: -9999999px;
+  left: -9999999px;
+  opacity: 0;
+}
+
+
+// I also like to have some spacer classes. Again, scoff at their non-semantic-ness if you feel like it, but I find them immensely useful, particularly when working within a CMS.
+// Note that I use the $size-base unit from the sizing scale set in _variables.scss.
+
+.spacer-top {
+	margin-top: $size-base;
+}
+
+.spacer-bot {
+	margin-bottom: $size-base;
+}
+
+// Misc
+
+.env-notice {
+  color: #FFF;
+  position: fixed;
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  font-size: $size-h4;
+  @include upperspace;
+  font-weight: $font-weight-strong;
+  padding: $size-xsml $size-sml;
+
+  &.development {
+    background-color: royalblue;
+  }
+
+  &.staging {
+    background-color: indianred;
+  }
+}
+
+
+

@@ -1,0 +1,8 @@
+.icon {
+  height: $size-h3;
+  width: $size-h3;
+
+  .article-title & {
+    fill: $color-accent-med;
+  }
+}

@@ -1,0 +1,45 @@
+
+// ---
+// Base Site Styles
+// ---
+
+* {
+	 box-sizing: border-box;
+}
+
+// General Selectors
+
+
+body {
+  // background-image: url(../img/prohib.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+img {
+	max-width: 100%;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+
+// Header
+
+
+
+// Main Site Content
+
+
+// Footer
+
+
+
+// Misc Utilities
+
+.edit-link {
+  @include meta($color-notice-warning);
+  font-weight: $font-weight-strong;
+}

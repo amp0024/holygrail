@@ -1,0 +1,101 @@
+{
+    "key": "group_57574e817f11d",
+    "title": "Page Header",
+    "fields": [
+        {
+            "key": "field_57574efa100a5",
+            "label": "Hero Image (1200 x 600)",
+            "name": "hero_image",
+            "type": "image",
+            "instructions": "Upload an image for the header of the home page. The focal point should be on the right since text will be overlaid on the left.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_57574f631ffcb",
+            "label": "Main Tagline",
+            "name": "main_tagline",
+            "type": "text",
+            "instructions": "A few, catchy words describing this page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 140,
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_57574fa5b4fb2",
+            "label": "Intro Blurb",
+            "name": "intro_blurb",
+            "type": "textarea",
+            "instructions": "A sentence or two expanding on the main tagline.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "slug",
+        "author",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1471460137
+}

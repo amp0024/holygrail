@@ -1,0 +1,119 @@
+
+// ---
+// VARIABLES GO HERE...
+// - Breakpoints
+// - Colors
+// - SCALES
+// - 
+// ---
+
+// START BREAKPOINTS
+
+$screen-xs: 		440px;
+$screen-sm: 		680px;
+$screen-md: 		840px;
+$screen-lg: 		1200px;
+
+// END BREAKPOINTS
+
+// START COLORS
+
+$blue:        #0062D4;
+$dark-blue: 	darken($blue, 20%);
+$grey-blue:   lighten(#334D5C, 15%);
+$teal: 				#45B29D;
+$yellow: 			#EFC94C;
+$orange: 			#E27A3F;
+$red: 				#B74538;
+
+$white: #FFF;
+$black: #1E1E1E;
+
+$grey-light:  #B2B2B2;
+$grey-med:    #777777;
+$grey-dark:   #454545;
+
+$color-body-bkgd: $white;
+$color-body-text: $black;
+
+// UTILITY
+$color-accent-vlight:  $white;
+$color-accent-light: 	$grey-light;
+$color-accent-med: 		$grey-med;
+$color-accent-dark:		$grey-dark;
+
+$color-text-light:    $white;
+$color-text-med: 		  $grey-med;
+$color-text-dark: 		$black;
+
+$color-notice-success:	 $teal;
+$color-notice-info:		   lighten($dark-blue, 20%);
+$color-notice-danger:		 $red;
+$color-notice-warning:	 $orange;
+
+// ELEMENTS
+$color-link: 		       mix($grey-med, $red);
+$color-link-hover: 		 darken($color-link, 20%);
+$color-link-active: 	 darken($color-link, 60%);
+
+// COMMON
+$color-rotate-text:   $color-text-light;
+$color-rotate-bkgd:   $color-accent-med;
+$color-rotate-link:   $color-accent-light;
+
+
+
+// START SCALE
+
+// Font sizes, margins, padding, ETC. 
+
+$size-base:  		1rem;
+$size-xsml:     $size-base*0.6;
+$size-sml:  		$size-base*0.8;
+
+$size-h1:  			$size-base*2.6;
+$size-h2:  			$size-base*2.2;
+$size-h3:  			$size-base*1.8;
+$size-h4:  			$size-base*1.4;
+$size-h5:  			$size-base*1.2;
+$size-h6:  			$size-sml;
+
+// Z-Index Scale
+$z-base:      1;
+$z-back:      $z-base+1;
+$z-mid:       $z-base+2;
+$z-top:       $z-base+3;
+$z-tiptop:    $z-base+4;
+
+// END SCALE
+
+// TYPOGRAPHY
+
+$sans-serif: 		'roboto', Helvetica, sans-serif;
+$serif:         'ltc-bodoni-175', Georgia, serif;
+
+$sans-serif-fallback: Helvetica, sans-serif;
+$serif-fallback: Georgia, serif;
+
+// Semantic names
+
+$line-height-base:  1.5;
+$line-height-small: 1.2;
+
+$heading-font: 		$sans-serif;
+$body-font: 		  $sans-serif;
+
+$font-weight:     300;
+$font-weight-strong: 700;
+
+// $body-font-fallback:		$sans-serif-fallback;
+// $heading-font-fallback:	$serif-fallback
+
+
+
+// ----
+// Helpers
+// ----
+
+$border-accent: 1px dotted $color-accent-med;
+

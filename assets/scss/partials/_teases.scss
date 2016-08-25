@@ -1,0 +1,67 @@
+
+.tease-loop-wrap {
+  @include grid($wrap: wrap);
+}
+
+.tease {
+  margin-bottom: $size-h3;
+  // padding-top: $size-base;
+  padding: $size-base;
+  @include bp(sm) {
+    @include cell(half);
+  }
+
+  // @include bp(lg) {
+  //   @include cell(third);
+  // }
+}
+
+.tease-inner {
+  background-color: rgba($color-body-bkgd, 0.8);
+  border: 2px solid rgba($color-accent-light, 0.3);
+}
+
+.tease-thumb {
+  border-bottom: 5px solid $color-link;
+  position: relative;
+}
+
+.tease-thumb-img {
+  display: block;
+  width: 100%;
+}
+
+.tease-info {
+  // border-top: $border-accent;
+  padding: $size-base;
+
+  > p {
+    @include bp(md) {
+      font-size: $size-sml;
+    }
+  }
+}
+
+.tease-title {
+  margin-top: 0;
+  line-height: $line-height-small;
+  // font-style: italic;
+  font-size: $size-h4;
+}
+
+.tease-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include upperspace;
+  background-color: rgba($color-accent-dark, 0.7);
+  color: $color-text-light;
+  padding: $size-xsml $size-sml;
+}
+
+.date {
+  margin-top: 0;
+  // margin-bottom: 0;
+  @include meta($color-accent-med);
+  font-style: italic;
+}

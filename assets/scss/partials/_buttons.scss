@@ -1,0 +1,50 @@
+// ---
+// Buttons
+// ---
+
+// Here's a simple button mixin. Instead of keeping it in utility/_mixin.scss, I'm putting it here so we can easily reference it without going into a new file.
+
+@mixin button($background, $text-color: $color-text-light) {
+	background-color: $background;
+	color: $text-color !important;
+	padding: $size-base $size-h4;
+	text-decoration: none;
+
+  &:hover {
+    background-color: darken($background, 8%);
+  }
+
+  &:active {
+    background-color: darken($background, 15%);
+  }
+
+  .icon {
+    fill: $text-color;
+    // fill: red;
+  }
+}
+
+// Default button
+.btn-default {
+	@include button($color-accent-dark, $color-text-light);
+}
+
+.btn-info {
+	@include button($color-notice-info, $color-text-light);
+}
+
+.btn-wrap {
+  text-align: center;
+  display: flex;
+}
+
+.btn-icon,
+.btn-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .icon {
+    padding-left: $size-xsml;
+  }
+}

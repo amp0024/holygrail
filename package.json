@@ -1,0 +1,22 @@
+{
+  "name": "holygrail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amp0024/holygrail.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amp0024/holygrail.git"
+  },
+  // "homepage": "https://github.com/laras126/timber-starter-theme#readme"
+}

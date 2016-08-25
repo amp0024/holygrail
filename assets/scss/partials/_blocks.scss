@@ -1,0 +1,56 @@
+
+// Image Block
+
+.block.-image {
+  text-align: center;
+}
+
+// Inline Elements Block
+
+
+.block.-inline_elements {
+  @include clearfix;
+}
+
+.inline-elem {
+  padding-bottom: $size-xsml;
+
+  @include bp(sm) {
+
+    max-width: 50%;
+
+    &.alignleft {
+      padding-right: 0%;
+      // padding-right: $size-sml;
+    }
+
+    &.alignright {
+      padding-left: 0%;
+      // padding-left: $size-sml;
+    }
+  }
+
+  @include bp(md) {
+
+    &.alignleft {
+      margin-left: -$c-pad;
+    }
+
+    &.alignright {
+      margin-right: -$c-pad;
+    }
+    &.-large {
+      width: 75%;
+    }
+
+    &.-medium {
+      width: 60%;
+    }
+
+    &.-small {
+      width: 40%;
+    }
+
+  }
+}
+

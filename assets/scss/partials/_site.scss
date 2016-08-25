@@ -1,0 +1,94 @@
+
+.site-header {
+  text-align: center;
+  background-color: rgba($black, 0.7);
+  @include bp(nav) {
+    padding-bottom: $size-h4;
+  }
+  color: $color-text-light;
+
+  @include bp(nav) {
+    text-align: left;
+  }
+}
+
+.site-header-inner {
+  @include grid($guttered: false, $wrap: wrap);
+}
+
+.site-nav {
+  width: 100%;
+  align-self: center;
+  order: 2;
+  @include bp(nav) {
+    width: auto;
+    order: 1;
+    @include grid($guttered: false);
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+}
+
+.site-logo {
+  font-family: $serif;
+  width: 100%;
+  margin-top: 0;
+  @include bp(nav) {
+    width: auto;
+    align-self: center;
+    order: 0;
+  }
+}
+
+a.site-logo-link {
+  @include upperspace;
+  font-size: $size-h4;
+  color: $color-accent-vlight;
+}
+
+.site-description {
+  margin: 0;
+  font-size: $size-sml;
+  width: 100%;
+
+  @include bp(nav) {
+    align-self: flex-start;
+    order: 2;
+  }
+}
+
+.site-main {
+
+  // .single &,
+  // .page &,
+  // body:not(.blog) & {
+    background-color: rgba(#FFF, 0.7);
+    @include contain(lg);
+    // padding: 0;
+  // }
+
+  // .blog &,
+  // .archive & {
+  //   width: 90%;
+  //   margin: 0 auto;
+  //   max-width: 1200px;
+  // }
+
+  padding-top: $size-h3;
+  padding-bottom: $size-h3;
+
+  @include bp(nav) {
+    // padding-top: $size-h1*2.5;
+  }
+}
+
+.site-footer {
+  @include rotate($bkgd: rgba($color-accent-dark, 0.7));
+  padding-top: $size-h4;
+  padding-bottom: $size-h4;
+
+  p {
+    @include meta($color-text-light);
+  }
+
+}

@@ -1,0 +1,16 @@
+{% extends 'blocks/base.twig' %}
+
+{% block block_content %}
+
+  <blockquote>{{block.testimonial_text}}</blockquote>
+  <p>
+    {% if block.source_link %}
+      <a href="{{block.source_link}}" target="blank">
+    {% endif %}
+    {{block.source}}
+    {% if block.source_link %}
+      </a>
+    {% endif %}
+  </p>
+
+{% endblock %}

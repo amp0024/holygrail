@@ -1,0 +1,23 @@
+.article-title {
+  // margin-top: 0;
+  text-align: center;
+  margin-bottom: $size-base;
+  font-size: $size-h3;
+  line-height: 1.1;
+  @include bp(md) {
+    font-size: $size-h1;
+  }
+}
+
+.cat-indicator {
+  // @include upperspace;
+  // font-weight: normal;
+  // display: block;
+  // font-size: $size-base;
+  // padding-bottom: $size-sml;
+  color: $color-accent-med;
+}
+
+.article-summary {
+  font-size: $size-h5;
+}

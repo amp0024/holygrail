@@ -1,0 +1,39 @@
+{% extends "base.twig" %}
+
+{% block header_content %}
+  <div class="success">Start archive.twig</div>
+
+  <header class="contain-sm article-header">
+    <div class="success">Start archive.twig (Header)</div>
+    <h1 class="article-title">{{title}}</h1>
+  </header>
+  <p class="meta-upper text-center">Filter by:</p>
+  <ul class="cat-list -header">
+    <li class="cat-list-item">
+      <a class="cat-item-link -all" href="{{posts_page_link}}">All Posts</a>
+    </li>
+    {% for c in cats %}
+      {% if c.name != 'Uncategorized' %}
+        <li class="cat-list-item">
+          <a href="{{c.link}}" class="cat-item-link{{c.name == title ? ' -current' }}">{{c.name}}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+      <div class="error">End archive.twig (Header)</div>
+
+{% endblock %}
+
+{% block content %}
+  <div class="tease-loop-wrap">
+  	{% for post in posts %}
+  		{% include ['teases/tease-'~post.format~'.twig', 'teases/tease-'~post.post_type~'.twig','teases/tease.twig'] %}
+  	{% endfor %}
+  </div>
+
+  <div class="error">End archive.twig</div>
+{% endblock %}
+
+{% block footer_content %}
+
+{% endblock %}

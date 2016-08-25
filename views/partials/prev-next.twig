@@ -1,0 +1,20 @@
+<div class="contain-lg">
+  <nav class="prev-next">
+    {% if post.prev %}
+      <div class="prev">
+        <a href="{{post.prev.link}}">
+          <span class="indicator">&larr; Previous</span><br>
+          <span class="title">{{post.prev.title}}</span>
+        </a>
+      </div>
+    {% endif %}
+    {% if post.next %}
+      <div class="next">
+        <a href="{{post.next.link}}">
+          <span class="indicator">Next &rarr;</span><br>
+          <span class="title">{{post.next.title}}</span>
+        </a>
+      </div>
+    {% endif %}
+  </nav>
+</div>

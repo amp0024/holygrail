@@ -1,0 +1,15 @@
+{% extends 'blocks/base.twig' %}
+
+{% block block_content %}
+
+  {% for id in block.items %}
+    {% set item = TimberPost(id) %}
+    <img src="{{item.thumbnail.src('thumbnail')}}" srcset="
+      {{item.thumbnail.src('medium')}} 800w,
+      {{item.thumbnail.src('large')}} 1024w"
+      alt="Thumbnail">
+    <h4>{{item.title}}</h4>
+    <p>{{item.excerpt}}</p>
+  {% endfor %}
+
+{% endblock %}

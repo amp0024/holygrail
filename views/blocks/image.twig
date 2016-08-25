@@ -1,0 +1,18 @@
+{% extends 'blocks/base.twig' %}
+
+{% block block_content %}
+  <div class="success">Start views/blocks/image.twig</div>
+
+  {% set img = TimberImage(block.image) %}
+
+  <figure class="block-figure -{{block.size}}">
+    <img src="{{img.src}}" class="full-image" alt="">
+    {% if img.caption %}
+      <figcaption>
+        <p class="caption">{{img.caption}}</p>
+      </figcaption>
+    {% endif %}
+  </figure>
+  <div class="error">End views/blocks/img.twig</div>
+
+{% endblock %}

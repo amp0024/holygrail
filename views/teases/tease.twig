@@ -1,0 +1,41 @@
+
+<article class="tease tease-{{post.post_type}}" id="tease-{{post.ID}}">
+  {% block tease_content %}
+    <div class="success">Start views/teases/tease.twig</div>
+    <div class="tease-inner">
+      <div class="tease-thumb">
+        <a href="{{post.link}}">
+        {% if post.get_thumbnail %}
+          <img class="tease-thumb-img" src="{{post.thumbnail.src|resize(500,300)}}" />
+        {% else %}
+          <img class="tease-thumb-img" src="{{site.theme.link}}/assets/img/svg/placeholder.svg" alt="">
+        {% endif %}
+        </a>
+      </div>
+      <div class="tease-info">
+        <header class="tease-header">
+          <p class="date">{{post.date}}</p>
+          <h2 class="tease-title"><a href="{{post.link}}">{{post.title}}</a></h2>
+        </header>
+        {% if post.post_excerpt %}
+          <p>{{post.post_excerpt}}</p>
+          <a class="link-readmore" href="{{post.link}}">Read more...</a>
+        {% endif %}
+
+        {% include 'partials/edit-link.twig' %}
+        <footer class="tease-footer">
+          {% if post.get_terms('category') %}
+            <p class="meta">Filed under:
+            {% for c in post.get_terms('category') %}
+              <a class="meta" href="{{c.link}}">{{c.title}}</a>
+            {% endfor %}
+            </p>
+          {% endif %}
+        </footer>
+      </div>
+    </div>
+    <div class="error">Error views/teases/tease.twig</div>
+
+  {% endblock %}
+</article>
+

@@ -1,0 +1,38 @@
+{% extends 'teases/tease.twig' %}
+
+{% block tease_content %}
+  <div class="tease-inner">
+    {% if post.get_thumbnail %}
+      <div class="tease-thumb">
+        <a href="{{post.link_url}}" target="blank">
+          <img class="tease-thumb-img" src="{{post.thumbnail.src|resize(500,300)}}" />
+        </a>
+      </div>
+    {% endif %}
+    <div class="tease-info">
+      <header class="tease-header">
+        <p class="date">{{post.date}}</p>
+        <div class="grid">
+          <h2 class="tease-title"><a href="{{post.link_url}}" target="blank">{{post.title}}</a></h2>
+          <div class="cell-sixth">
+            {% include 'utility/svg.twig' with { file: 'new-window', prefix: 'icon' } %}
+         </div>
+        </div>
+      </header>
+      {% if post.post_excerpt %}
+        <p>{{post.post_excerpt}}</p>
+      {% endif %}
+
+      {% include 'partials/edit-link.twig' %}
+      <footer class="tease-footer">
+        {% if post.get_terms('category') %}
+          <p class="meta">Filed under:
+          {% for c in post.get_terms('category') %}
+            <a class="meta" href="{{c.link}}">{{c.title}}</a>
+          {% endfor %}
+          </p>
+        {% endif %}
+      </footer>
+    </div>
+  </div>
+{% endblock %}
